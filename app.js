@@ -1,6 +1,10 @@
 let loader = document.getElementById('load');
-loader.style.display = 'none'
+loader.style.display = ''
 let countryName = document.querySelector('#country-name');
+let covidCase = document.querySelector('#covid-case');
+let covidDeath = document.querySelector('#covid-death');
+let covidRecover = document.querySelector('#covid-recover');
+
 const covidInfo = async () => {
     const inputField = document.getElementById('input-field');
     const inputFieldValue = inputField.value;
@@ -11,6 +15,9 @@ const covidInfo = async () => {
     if (inputFieldValue === '') {
         countryName.innerText = 'Write valid name'
         loader.style.display = 'none'
+        covidCase.innerText = '0'
+        covidDeath.innerText = '0'
+        covidRecover.innerText = '0'
     }
     else {
         
@@ -28,9 +35,10 @@ const covidInfo = async () => {
 
 const showCovidCase = (data) => {
 
-    const covidCase = document.querySelector('#covid-case');
-    const covidDeath = document.querySelector('#covid-death');
-    const covidRecover = document.querySelector('#covid-recover');
+    countryName.innerText = '0'
+    covidCase.innerText = '0'
+    covidDeath.innerText = '0'
+    covidRecover.innerText = '0'
 
     try{
         countryName.innerText = `${data[0].Country}`

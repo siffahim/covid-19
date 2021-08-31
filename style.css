@@ -17,8 +17,8 @@ h2 {
     text-transform: uppercase;
 }
 
-#load {
+.loader{
     position: absolute;
-    left: 50%;
+    left: 49%;
     top: 50%;
 }
