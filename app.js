@@ -1,5 +1,5 @@
 let loader = document.getElementById('load');
-loader.style.display = ''
+loader.style.display = 'none'
 let countryName = document.querySelector('#country-name');
 let covidCase = document.querySelector('#covid-case');
 let covidDeath = document.querySelector('#covid-death');
